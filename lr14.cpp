@@ -2,12 +2,12 @@
 #include <cmath>
 using namespace std;
 
-// 1. Проверка на чётность
+
 bool isEven(int number) {
     return number % 2 == 0;
 }
 
-// 2. Проверка на положительность
+
 bool isPositive(int number) {
     return number > 0;
 }
@@ -15,7 +15,7 @@ bool isPositive(int number) {
 // 3. Сумма цифр
 int digitSum(int number) {
     int sum = 0;
-    number = abs(number); // модуль, чтобы работало с отрицательными
+    number = abs(number); 
     while (number > 0) {
         sum += number % 10;
         number /= 10;
@@ -27,7 +27,7 @@ int digitSum(int number) {
 int digitCount(int number) {
     int count = 0;
     number = abs(number);
-    if (number == 0) return 1; // для нуля
+    if (number == 0) return 1; 
     while (number > 0) {
         count++;
         number /= 10;
@@ -35,7 +35,7 @@ int digitCount(int number) {
     return count;
 }
 
-// 5. Проверка на простое число
+
 bool isPrime(int number) {
     if (number < 2) return false;
     for (int i = 2; i <= sqrt(number); i++) {
